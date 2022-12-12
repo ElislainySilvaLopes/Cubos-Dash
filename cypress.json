@@ -8,5 +8,8 @@
   "env": {
     "baseUrlAPI": "https://dev-api.qa-assessment.cubos.dev/users",
     "TAGS": "not @ignore"
-  }
+  },
+  "scripts": {
+  "test": "mocha"
+}
 }
