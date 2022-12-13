@@ -4,6 +4,8 @@ on:
   push:
    pull_request:
    workflow_dispatch:
+    branches: 
+      - 'main' 
    paths: 
       - 'appsettings.json' 
  
@@ -20,6 +22,8 @@ jobs:
         uses: cypress-io/github-action@v2
 
         # checkout done so that files in the repo can be read by the sync 
+        -uses: azure/appconfiguration-sync@v1 
+        
         with: 
           configurationFile: 'appsettings.json' 
           format: 'json' 
