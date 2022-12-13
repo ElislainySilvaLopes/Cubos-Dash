@@ -18,8 +18,6 @@ jobs:
         uses: cypress-io/github-action@v2
 
         # checkout done so that files in the repo can be read by the sync 
-      - uses: actions/checkout@v2
-      - uses: azure/appconfiguration-sync@v2
         with: 
           configurationFile: 'appsettings.json' 
           format: 'json' 
