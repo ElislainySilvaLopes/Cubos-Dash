@@ -6,13 +6,22 @@ on:
    workflow_dispatch:
 
 jobs:
-  cypress-run:
+  with: 
+    configurationFile: 'appsettings.json' 
+    format: 'json' 
+    # Replace <ConnectionString> with the name of the secret in your                        
+    # repository 
+    connectionString: ${{ secrets.<ConnectionString> }} 
+    separator: ':' 
 
     runs-on: ubuntu-18.04
-
+    
+    cypress-run:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
+
+        
