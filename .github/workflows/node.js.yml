@@ -4,11 +4,7 @@ on:
   push:
    pull_request:
    workflow_dispatch:
-    branches: 
-      - 'main' 
-   paths: 
-      - 'appsettings.json' 
- 
+
 jobs:
   cypress-run:
 
@@ -20,14 +16,4 @@ jobs:
       
       - name: Cypress run
         uses: cypress-io/github-action@v2
-
-        # checkout done so that files in the repo can be read by the sync 
-        -uses: azure/appconfiguration-sync@v1 
         
-        with: 
-          configurationFile: 'appsettings.json' 
-          format: 'json' 
-          # Replace <ConnectionString> with the name of the secret in your                        
-          # repository 
-          connectionString: ${{ secrets.<ConnectionString> }} 
-          separator: ':' 
