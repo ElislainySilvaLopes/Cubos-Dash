@@ -4,7 +4,9 @@ on:
   push:
    pull_request:
    workflow_dispatch:
-
+   paths: 
+      - 'appsettings.json' 
+ 
 jobs:
   cypress-run:
 
