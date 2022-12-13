@@ -3,10 +3,10 @@ Feature: Login site PSEL QA
    Background:
       Given que estou na página de login
 
-   #Scenario: Fazer Login com sucesso
-      #When eu preencho os campos de email e senha corretamente
-      #And  clico no botão "ENTRAR"
-      #Then sou direcionado para a página inicial
+   Scenario: Fazer Login com sucesso
+      When eu preencho os campos de email e senha corretamente
+      And  clico no botão "ENTRAR"
+      Then sou direcionado para a página inicial
 
    Scenario: fazer login sem sucesso(preencher incorretamente os campos email e senha)
       When preencho incorretamente os campos E-mail e Senha
