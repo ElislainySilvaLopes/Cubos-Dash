@@ -9,14 +9,6 @@ jobs:
   cypress-run: 
     runs-on: ubuntu-18.04
 
-    with: 
-    configurationFile: 'appsettings.json' 
-    format: 'json' 
-    # Replace <ConnectionString> with the name of the secret in your                        
-    # repository 
-    connectionString: ${{ secrets.<ConnectionString> }} 
-    separator: ':'
-
     cypress-run:
     steps:
       - name: Checkout
@@ -24,5 +16,13 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
+
+    with: 
+    configurationFile: 'appsettings.json' 
+    format: 'json' 
+    # Replace <ConnectionString> with the name of the secret in your                        
+    # repository 
+    connectionString: ${{ secrets.<ConnectionString> }} 
+    separator: ':'
 
         
