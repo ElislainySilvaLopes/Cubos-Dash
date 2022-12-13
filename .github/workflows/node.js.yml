@@ -13,9 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Run ServeRest
-        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest:latest
-
+      
       - name: Cypress run
         uses: cypress-io/github-action@v2
