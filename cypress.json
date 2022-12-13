@@ -5,6 +5,7 @@
   "viewportWidth": 1440,
   "viewportHeight": 900,
   "testFiles": "**/*.feature",
+  "allure": true,
   "env": {
     "baseUrlAPI": "https://dev-api.qa-assessment.cubos.dev/users",
     "TAGS": "not @ignore"
