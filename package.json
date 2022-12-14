@@ -2,7 +2,7 @@
   "name": "cubos-psel",
   "version": "1.0.0",
   "devDependencies": {
-    "cypress": "^8.3.0",
+    "cypress": "^8.7.0",
     "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
     "cypress-cucumber-preprocessor": "^2.5.5",
     "multiple-cucumber-html-reporter": "^1.18.0"
@@ -33,5 +33,9 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": ""
+  "homepage": "",
+  "dependencies": {
+    "allure": "^0.0.0",
+    "plugin": "^0.3.3"
+  }
 }
