@@ -21,5 +21,4 @@ jobs:
          build: npm run build
          start: npm start
          browser: chrome
-         env:
-        MAPBOX_API_KEY: test
+         
