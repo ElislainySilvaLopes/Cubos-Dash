@@ -14,9 +14,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-        # Install NPM dependencies, cache them correctly
-        # and run all Cypress tests
-      
       - name: Cypress run
-        uses: cypress-io/github-action@v2 # use the explicit version number
+        uses: cypress-io/github-action@v2 
+
+      - name: Dependencies
+        shell: bash
+        env:
+          CUCUMBER_JSON_FORMATTER_URL: https://github.com/cucumber/common/releases/download/json-formatter%2Fgo%2Fv19.0.0/cucumber-json-formatter-windows-amd64
+        run: |
+          npm install
+          curl -L $CUCUMBER_JSON_FORMATTER_URL > cucumber-json-formatter.exe
+          chmod +x ./cucumber-json-formatter.exe
+          echo $GITHUB_WORKSPACE >> $GITHUB_PATH
         
