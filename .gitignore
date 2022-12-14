@@ -4,3 +4,4 @@ cypress/screenshots
 cypress/cucumber-json
 public
 debug.log
+BDD/BDD.md
