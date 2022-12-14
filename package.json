@@ -22,7 +22,7 @@
     "cy:open": "npx cypress open",
     "test:chrome": "npx cypress run --browser chrome",
     "test:firefox": "npx cypress run --browser firefox",
-    "test": "mocha"
+    "test": "cypress run"
   },
   "keywords": [],
   "description": "Para que você possa executar esse projeto a partir de sua maquina recomendamos fortemente seguir os passos abaixo.",
