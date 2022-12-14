@@ -18,10 +18,11 @@ jobs:
         # and run all Cypress tests
       
       - name: Cypress run
-        uses: cypress-io/github-action@v2
-
+        uses: cypress-io/github-action@v4.x.x # use the explicit version number
         with:
-          build: npm run build
-          start: npm start
+          record: true
+        env:
+          # pass GitHub token to detect new build vs re-run build
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
        
       
