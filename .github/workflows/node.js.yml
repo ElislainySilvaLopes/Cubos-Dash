@@ -21,7 +21,7 @@ jobs:
         uses: cypress-io/github-action@v2
 
         with:
-         # Specify Browser since container image is compile with Firefox
-          browser: chrome
+          build: npm run build
+          start: npm start
        
       
