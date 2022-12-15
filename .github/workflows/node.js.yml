@@ -17,10 +17,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2 
 
-      - name: Run App & Cypress
-        run: |
-          yarn ci-start & # run app in background
-          npx -y wait-on DOMAIN_OF_APP --timeout 300000 &&
-          yarn cypress:ci
+    
         
          
