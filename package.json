@@ -5,8 +5,7 @@
     "cypress": "^8.7.0",
     "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
     "cypress-cucumber-preprocessor": "^2.5.5",
-    "multiple-cucumber-html-reporter": "^1.18.0",
-    "cypressHelper.fixtureAutocompletionCommands": "fixture"
+    "multiple-cucumber-html-reporter": "^1.18.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
