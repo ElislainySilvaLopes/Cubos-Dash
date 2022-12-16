@@ -17,7 +17,7 @@
  */
 
 const cucumber = require("cypress-cucumber-preprocessor").default
-const yourFixturePath = "Credentials.json"
+const Fixtures= "Credentials.json"
 
 module.exports = (on, config) => {
   on("file:preprocessor", cucumber())
